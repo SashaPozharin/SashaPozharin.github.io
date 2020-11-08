@@ -1,0 +1,8 @@
+#banner{
+    width: 750px;
+}
+
+.carousel-caption{
+    background-color:rgba(43, 38, 38, 0.315);
+    color: rgb(235, 190, 190);
+}
