@@ -135,9 +135,166 @@
                 <span class="span carousel-control-prev-icon d-none d-md-inline-block"></span>
             </a>
         </div>
-        
+
     </div>
 
+    <!--спиннер 
+    .spinner-border [<div>] < кручащийся спиннер
+        role='status'
+        .spinner-grow [<div>] - пульсирующий спиннер
+    -->
+
+    <!--Границы
+    .border - все границы
+    .border-{top/left/bottom/right} - граниа к одной стороне
+    .border-{ЦВЕТ} - цвет границы
+    [скругление границ]
+    .rounded - скругление всех границ
+    .rounded-{top/left/bottom/right} - скругление к одной стороне
+    .rounded-circle - округляет до круга
+    .rounded-pill - скругляет до пилюлю
+    -->
+    <div class="container-fluid d-flex justify-content-center border-bottom border-top border-danger">
+        <div class="row">
+            <div class="spinner-border text-primary"></div>
+            <div class="spinner-border text-secondary"></div>
+            <div class="spinner-border text-success"></div>
+            <div class="spinner-border text-dark"></div>
+            <div class="spinner-border text-danger"></div>
+            <div class="spinner-border text-warning"></div>
+            <div class="spinner-border text-info"></div>
+            <div class="spinner-border text-light"></div>
+        </div>
+        <div class="row">
+            <div class="spinner-grow text-primary"></div>
+            <div class="spinner-grow text-secondary"></div>
+            <div class="spinner-grow text-success"></div>
+            <div class="spinner-grow text-dark"></div>
+            <div class="spinner-grow text-danger"></div>
+            <div class="spinner-grow text-warning"></div>
+            <div class="spinner-grow text-info"></div>
+            <div class="spinner-grow text-light"></div>
+        </div>
+        <div class="div bg-success rounded-circle" style="width: 45px; height: 35px"></div>
+        <div class="div bg-success rounded-pill text-right pt-2" style="width: 250px; height: 35px">log in</div>
+    </div>
+    <!--Карточки
+    .card [<div>] - обьявляем карточку
+        {картинка карточки}
+        .card-img-{top/[bottom?/left?/right?]} - картинка карточки
+        {внутренности карточки}
+        .card-body [<div>] - граница тела карточки
+            .card-title - заголовок карточки [div/span/h/p]
+            .card-subtitle - подзагаловок карточки [div/span/h/p]
+            .card-text - основной текст карточки [div/span/h/p]
+            .card-link - ссылка карточки <a>
+        {header и Footer карточки}
+        .card-header - header карточки
+        card.footer - footer карточки <div>
+    {Динамическая bootstrap-сетка}
+    .row .row-cols-{breakpoint}-{количество колонок} [<div>] - динамическая сетка
+    {Группа карточек}
+    .card-deck - группировка несколько карточек в одном элементе
+    .card-group - группировка несколько карточек в одном элементе [<div>]
+    {Доп. параметры}
+    .font-weight-{ВЕС} - жирность текста
+
+    -->
+
+    <!--<div class="card bg-info">
+        <div class="card-header bg-dark text-light" style="text-align: center;">Первое блюдо</div>
+        <img src="img/1.jpg" class="card-img-top">
+        <div class="card-body">
+            <h4 class="card-title text-center">Борщ</h4>
+            <P class="card-subtitle text-warning text-center">57,7 ккал на 100 грамм</P>
+            <p class="card-text text-center">Самое популярное блюдо в России и очень вкусное!</p>
+            <button class="btn btn-warning">Ингредиенты</button>
+        </div>
+        <div class="card-heade bg-secondary text-light" style="text-align: right">12/10/2020</div>
+    </div>-->
+
+    <div class="container-md">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            <div class="col">
+                <div class="card bg-info">
+                    <div class="card-header bg-dark text-light" style="text-align: center;">Первое блюдо</div>
+                    <img src="img/1.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Борщ</h4>
+                        <P class="card-subtitle text-warning text-center">57,7 ккал на 100 грамм</P>
+                        <p class="card-text text-center">Самое популярное блюдо в России и очень вкусное!</p>
+                        <button class="btn btn-warning">Ингредиенты</button>
+                    </div>
+                    <div class="card-heade bg-secondary text-light" style="text-align: right">12/10/2020</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-info">
+                    <div class="card-header bg-dark text-light" style="text-align: center;">Второе блюдо</div>
+                    <img src="img/2.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Омлет</h4>
+                        <P class="card-subtitle text-warning text-center">184 ккал на 100 грамм</P>
+                        <p class="card-text text-center">Вкусный завтрак, быстро готовится и очень аппетитный!</p>
+                        <button class="btn btn-warning">Ингредиенты</button>
+                    </div>
+                    <div class="card-heade bg-secondary text-light" style="text-align: right">12/10/2020</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-info">
+                    <div class="card-header bg-dark text-light" style="text-align: center;">Второе блюдо</div>
+                    <img src="img/3.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Жаркое</h4>
+                        <P class="card-subtitle text-warning text-center">248 ккал на 100 грамм</P>
+                        <p class="card-text text-center">Аппетитное блюдо, но нужно уметь его готовить!</p>
+                        <button class="btn btn-warning">Ингредиенты</button>
+                    </div>
+                    <div class="card-heade bg-secondary text-light" style="text-align: right">12/10/2020</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-info">
+                    <div class="card-header bg-dark text-light" style="text-align: center;">Первое блюдо</div>
+                    <img src="img/1.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Борщ</h4>
+                        <P class="card-subtitle text-warning text-center">57,7 ккал на 100 грамм</P>
+                        <p class="card-text text-center">Самое популярное блюдо в России и очень вкусное!</p>
+                        <button class="btn btn-warning">Ингредиенты</button>
+                    </div>
+                    <div class="card-heade bg-secondary text-light" style="text-align: right">12/10/2020</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-info">
+                    <div class="card-header bg-dark text-light" style="text-align: center;">Первое блюдо</div>
+                    <img src="img/1.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Борщ</h4>
+                        <P class="card-subtitle text-warning text-center">57,7 ккал на 100 грамм</P>
+                        <p class="card-text text-center">Самое популярное блюдо в России и очень вкусное!</p>
+                        <button class="btn btn-warning">Ингредиенты</button>
+                    </div>
+                    <div class="card-heade bg-secondary text-light" style="text-align: right">12/10/2020</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-info">
+                    <div class="card-header bg-dark text-light" style="text-align: center;">Первое блюдо</div>
+                    <img src="img/1.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Борщ</h4>
+                        <P class="card-subtitle text-warning text-center">57,7 ккал на 100 грамм</P>
+                        <p class="card-text text-center">Самое популярное блюдо в России и очень вкусное!</p>
+                        <button class="btn btn-warning">Ингредиенты</button>
+                    </div>
+                    <div class="card-heade bg-secondary text-light" style="text-align: right">12/10/2020</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
