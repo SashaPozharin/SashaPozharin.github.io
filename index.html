@@ -223,7 +223,7 @@
                         <h4 class="card-title text-center">Борщ</h4>
                         <P class="card-subtitle text-warning text-center">57,7 ккал на 100 грамм</P>
                         <p class="card-text text-center">Самое популярное блюдо в России и очень вкусное!</p>
-                        <button class="btn btn-warning">Ингредиенты</button>
+                        <button class="btn btn-warning" data-toggle="#ink1" aria-expanded="false" aria-controls="ink">Ингредиенты</button>
                     </div>
                     <div class="card-footer bg-secondary text-light" style="text-align: right">12/10/2020</div>
                 </div>
@@ -295,6 +295,70 @@
             </div>
         </div>
     </div>
+<!--tooltip / Popover (pop-up)
+    [Tooltip - подсказка при наведении]
+    .btn .btn-[color] <button>
+        "data-toggle"="tooltip" - указываем тип popup
+        data-placement="top/right/lef/bottom" - расположение текста
+        data-html="true/false" - режим html
+        title="{text/html}"
+
+    popover - подсказка при нажатии
+        .btn .btn-[color] <button>
+            "data-toggle"="popover" - указываем тип popup
+            data-placement="top/right/lef/bottom" - расположение текста
+            data-html="true/false" - режим html
+            data-content="{text/html}"
+            popover - подсказка при наведении
+-->
+<div class="row justify-content-center my-5">
+    <button class="btn btn-primary" data-toggle="tooltip" data-placement="top" data-html="true"
+    title="
+    свекла  (1 шт.)
+    <p></p>
+    картошка  (4 шт.)
+    <p></p>
+    морковка  (1 шт.)
+    <p></p>
+    лук (2  шт. )
+    <p></p>
+    лавровый лист  (2 шт.)
+    <p></p>
+    мясной бульон (2 л)
+    <p></p>
+    капуста (150 гр)
+    <p></p>
+    соль, перец, чеснок по вкусу
+    <p></p>
+    болгарский перец  (1  шт. )
+    <p></p>
+    томатная паста (3 ст. ложки)
+    "
+    >нажми на меня</button>
+    <button class="btn btn-primary" data-toggle="popover" data-placement="top"
+    data-content="пример текста">нажми на меня</button>
+</div>
+
+<!--Collapse (разрушение)
+(скрытие элементов при определенном событии)
+(элемент котроля)
+data-toggle="collapse"
+data-target="#(название коллапса)" - указание на элемент котоый скрываем
+aria-expander="true/false" - значения показа или скрытия элемента
+aria-controls="{название коллапса}"
+(элемент скрытия)
+.collapse #[название коллапса] <любой>
+-->
+
+<div class="row justify-content-center">
+    <button class="btn btn-danger" data-toggle="collapse" data-target="#txt" aria-expanded="false" aria-control="txt">я жив</button>
+
+    <div class="div collapse" id="txt">
+        <h1>YA ZAGALOVOK</h1>
+        <p>YA TEXT!</p>
+    </div>
+</div>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
