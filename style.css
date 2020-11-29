@@ -6,3 +6,9 @@
     background-color:rgba(43, 38, 38, 0.315);
     color: rgb(235, 190, 190);
 }
+#answer{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    user-select: none;
+}

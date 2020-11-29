@@ -420,10 +420,82 @@ aria-controls="{название коллапса}"
     </div>
 </div>
 
+<!--FORM
+    .form-group - обьявление формы <form>
+    .form-inline - обьявление формы в одну строку
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+-->
+<!--форма для отправки запроса на выбранный сайт-->
+<div class="row justify-content-center my-3">
+    <form class="form-groum">
+        <select class="custom-select">
+            <option value="https://artart241.github.io">Артем</option>
+            <option value="https://ucmit.github.io">Улан</option>
+            <option value="https://svetpru.github.io">Светлана</option>
+            <option value="https://vaso1943.github.io">Василий</option>
+            <option value="https://lazh22.github.io">Владимир</option>
+            <option value="https://zloikon.github.io">Максим</option>
+            <option value="https://formit21.github.io">Степан</option>
+            <option selected value="https://hhamster39.github.io">Альбина</option>
+        </select>
+        <button type="button" class="btn btn-warning">отправить запрос</button>
+    </form>
+</div>
+<!--Модальное окно
+    
+    Элементы модального окна
+.modal.fade - обьявляем границы модального окна <div>
+#{НАЗВАНИЕ_ОКНА} - для определения окна
+data-keyboard="false/true" - отключение клавиатуры пользователя
+{data-backdrop="static"} - запрет на закрытие окна через свободное пространство
+tabindex="-1" - сухая инфа браузера
+aria-hidden="true" - скрывает модальное окно
+aria-labelledby="{заголовок?}"
+
+
+
+.modal-dialog - обьявление границ контентОВ
+    .modal-content - объявление границ контентА
+        .modal-header
+            .modal-title#(заголовок?)
+        .modal-body
+        .modal-footer
+            .btn.btn-{цвет} data-dismiss="modal"
+Управление модальным окном
+.btn-btn-{Цвет}
+data-toggle="modal"
+data-target="#назваине окна"        
+-->
+<div class="modal fade" id="msgBox" data-keyboard="false" bata-backdrop="static" tabindex="-1" aria-hidden="true" aria-labelledby="msgLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="msgLabel">Сообщение от </h4>
+            </div>
+            <div class="modal-body">
+                <!--Соощбение от другого пользователя-->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-warning" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <button class="btn btn-primary" data-toggle="modal" data-target="#msgBox">Вызвать окно</button>
+</div>
+
+<!-- сообщение для ответа на запрос-->
+<div id="answer">
+    <h1>Привет!</h1>
+    <P>Как жизнь????????!!!!!!!!!</P>
+</div>
+
+    <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
+    </script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
     </script>
@@ -432,5 +504,6 @@ aria-controls="{название коллапса}"
     </script>
     <script src="script.js"></script>
 </body>
+
 
 </html>
